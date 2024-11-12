@@ -31,21 +31,23 @@ function App() {
   }
   return (
     <>
-     <h1>Hello World</h1>
-     <section>
+     <h1>Adicione Disciplinas com codigo e nome :D</h1>
+     <section className='Inputs'>
         <input ref={inputcode} type="text" />
         <input ref={inputnome}  type="text"/>
-        <input type="button" value="Increment" onClick={ clickHandler}/>
+        <input className='IPTButton' type="button" value="Increment" onClick={ clickHandler}/>
      </section>
 
-    
-    { 
+      <section className='Elements'>
+      { 
       disciplinas.map(
         (disciplina,index)=>{
           return <Disciplina codigo={disciplina.codigo} removeHandler={()=>{removeHandler(index)}}  nome={disciplina.nome}/>
         }
       )
     }
+      </section>
+    
 
     </>
   )

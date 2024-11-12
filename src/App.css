@@ -1,0 +1,24 @@
+.Inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+.Inputs > input{
+    margin: 10px;
+    width: 50%;
+    height: 30px;
+    margin: 0%;
+}
+.Inputs .IPTButton{
+    margin: 10px;
+    width: 50%;
+    height: 30px;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+h1{
+    text-align: center;
+}
