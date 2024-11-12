@@ -1,6 +1,8 @@
+import React from 'react';
+import './Disciplina.css'
 function Disciplina(params:any) {
     return (
-        <div>
+        <div className='disciplina'>
             <div>
                 DCC207
             </div>
