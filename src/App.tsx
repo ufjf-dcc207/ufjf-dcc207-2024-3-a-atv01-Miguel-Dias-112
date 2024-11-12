@@ -21,23 +21,28 @@ function App() {
     const codigo = (inputcode.current as unknown as HTMLInputElement).value;
     
     setDisciplinas([...disciplinas, {codigo:codigo, nome:nome}])
-    console.log('Botão clicado')
   }
-  
+  function removeHandler(index:number){
+    console.log('Botão clicado')
+    console.log(disciplinas)
+    disciplinas.splice(index,1)
+    setDisciplinas([...disciplinas])
+    
+  }
   return (
     <>
      <h1>Hello World</h1>
      <section>
         <input ref={inputcode} type="text" />
         <input ref={inputnome}  type="text"/>
-        <input type="button" value="Increment" onClick={ ()=>{clickHandler()}}/>
+        <input type="button" value="Increment" onClick={ clickHandler}/>
      </section>
 
     
     { 
       disciplinas.map(
-        (disciplina)=>{
-          return <Disciplina codigo={disciplina.codigo} nome={disciplina.nome}/>
+        (disciplina,index)=>{
+          return <Disciplina codigo={disciplina.codigo} removeHandler={()=>{removeHandler(index)}}  nome={disciplina.nome}/>
         }
       )
     }
