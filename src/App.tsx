@@ -14,7 +14,10 @@ function App() {
 
   const [disciplinas, setDisciplinas] = useState(_disciplinas)
 
- 
+  function clickHandler(nome:string, codigo:string){
+    setDisciplinas([...disciplinas, {codigo:codigo, nome:nome}])
+    console.log('Botão clicado')
+  }
   
   return (
     <>
@@ -22,7 +25,7 @@ function App() {
      <section>
         <input type="text" />
         <input type="text"/>
-        <input type="button" value="Increment"/>
+        <input type="button" value="Increment" onClick={ ()=>{clickHandler('aa','aaa')}}/>
      </section>
 
     
