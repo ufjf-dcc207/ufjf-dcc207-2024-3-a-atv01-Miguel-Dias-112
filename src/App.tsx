@@ -38,14 +38,16 @@ function App() {
         <input className='IPTButton' type="button" value="Increment" onClick={ clickHandler}/>
      </section>
 
-    
-    { 
+      <section className='Elements'>
+      { 
       disciplinas.map(
         (disciplina,index)=>{
           return <Disciplina codigo={disciplina.codigo} removeHandler={()=>{removeHandler(index)}}  nome={disciplina.nome}/>
         }
       )
     }
+      </section>
+    
 
     </>
   )

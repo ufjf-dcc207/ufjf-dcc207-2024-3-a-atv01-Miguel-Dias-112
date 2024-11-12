@@ -1,17 +1,28 @@
+
 .disciplina{
     display: flex;
     gap: 0.2em;
     width: 50%;
     justify-content: space-between;
+
+}
+.Elements{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .disciplina button{
     border: 1px solid black;
     height: auto;
     margin-left: 10px;
-    width: 50px;
+    width: 200px;
     background-color: red;
 }
-.disciplina > div{
+.disciplina > div{  
+    width: 100%;
     border: 1px solid black;
     padding: 0.5em;
 }
