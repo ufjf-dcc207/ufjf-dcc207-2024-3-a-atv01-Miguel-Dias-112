@@ -1,13 +1,18 @@
 import React from 'react';
 import './Disciplina.css'
-function Disciplina(params:any) {
+
+type DisciplinaProps = {
+    codigo:string;
+    nome:string;
+}
+function Disciplina({codigo, nome}:DisciplinaProps) {
     return (
         <div className='disciplina'>
             <div>
-                DCC207
+                {codigo}
             </div>
             <div>
-                Desenvolvimento web
+                {nome}
             </div>
         </div>
     )
