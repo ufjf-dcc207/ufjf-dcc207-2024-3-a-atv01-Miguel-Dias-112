@@ -4,14 +4,14 @@
     width: 50%;
     justify-content: space-between;
 }
-.disciplina > div{
-    border: 1px solid black;
-    padding: 0.5em;
-}
-.disciplina >button{
+.disciplina button{
     border: 1px solid black;
     height: auto;
     margin-left: 10px;
     width: 50px;
     background-color: red;
+}
+.disciplina > div{
+    border: 1px solid black;
+    padding: 0.5em;
 }

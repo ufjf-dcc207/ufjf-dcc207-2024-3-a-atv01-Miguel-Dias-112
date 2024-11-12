@@ -32,10 +32,10 @@ function App() {
   return (
     <>
      <h1>Hello World</h1>
-     <section>
+     <section className='Inputs'>
         <input ref={inputcode} type="text" />
         <input ref={inputnome}  type="text"/>
-        <input type="button" value="Increment" onClick={ clickHandler}/>
+        <input className='IPTButton' type="button" value="Increment" onClick={ clickHandler}/>
      </section>
 
     
