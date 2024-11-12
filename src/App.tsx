@@ -31,7 +31,7 @@ function App() {
   }
   return (
     <>
-     <h1>Hello World</h1>
+     <h1>Adicione Disciplinas com codigo e nome :D</h1>
      <section className='Inputs'>
         <input ref={inputcode} type="text" />
         <input ref={inputnome}  type="text"/>
