@@ -5,7 +5,7 @@ type DisciplinaProps = {
     nome:string;
     removeHandler:Function;
 }
-function Disciplina({codigo, nome}:DisciplinaProps) {
+function Disciplina({codigo, nome, removeHandler}:DisciplinaProps) {
     return (
         <div className='disciplina'>
             <div>
@@ -14,6 +14,7 @@ function Disciplina({codigo, nome}:DisciplinaProps) {
             <div>
                 {nome}
             </div>
+            <button onClick={()=>{removeHandler()}}>X</button>
         </div>
     )
 }
