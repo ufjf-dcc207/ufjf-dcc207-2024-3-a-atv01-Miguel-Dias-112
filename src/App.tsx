@@ -8,8 +8,12 @@ function App() {
   return (
     <>
      <h1>Hello World</h1>
-     <Disciplina></Disciplina>
-     <Disciplina></Disciplina>
+     <Disciplina codigo='NfaçoIdeia' nome='Algoritmos2'></Disciplina>
+     <Disciplina codigo='DCC206' nome='Desenvolvimento Web 1'></Disciplina>
+
+     <Disciplina codigo='DCC206' nome='Desenvolvimento Web 2'></Disciplina>
+     <Disciplina codigo='DCC206' nome='Desenvolvimento Front'></Disciplina>
+
     </>
   )
 }
