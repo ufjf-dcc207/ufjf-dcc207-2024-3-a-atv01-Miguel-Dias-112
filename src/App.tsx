@@ -30,7 +30,7 @@ function App() {
      <section>
         <input ref={inputcode} type="text" />
         <input ref={inputnome}  type="text"/>
-        <input type="button" value="Increment" onClick={ ()=>{clickHandler('aa','aaa')}}/>
+        <input type="button" value="Increment" onClick={ ()=>{clickHandler()}}/>
      </section>
 
     
