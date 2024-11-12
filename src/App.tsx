@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 import Disciplina from './Disciplina'
 type DisciplinaProps = {
@@ -13,8 +13,13 @@ function App() {
   ]
 
   const [disciplinas, setDisciplinas] = useState(_disciplinas)
+  const inputcode = useRef(null)
+  const inputnome = useRef(null)
 
-  function clickHandler(nome:string, codigo:string){
+  function clickHandler(){
+    const nome = (inputnome.current as unknown as HTMLInputElement).value;
+    const codigo = (inputcode.current as unknown as HTMLInputElement).value;
+    
     setDisciplinas([...disciplinas, {codigo:codigo, nome:nome}])
     console.log('Botão clicado')
   }
@@ -23,8 +28,8 @@ function App() {
     <>
      <h1>Hello World</h1>
      <section>
-        <input type="text" />
-        <input type="text"/>
+        <input ref={inputcode} type="text" />
+        <input ref={inputnome}  type="text"/>
         <input type="button" value="Increment" onClick={ ()=>{clickHandler('aa','aaa')}}/>
      </section>
 
