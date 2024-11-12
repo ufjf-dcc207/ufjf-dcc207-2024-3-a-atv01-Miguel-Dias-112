@@ -23,7 +23,11 @@ function App() {
     setDisciplinas([...disciplinas, {codigo:codigo, nome:nome}])
     console.log('Botão clicado')
   }
-  
+  function removeHandler(index:number){
+    console.log('Botão clicado')
+    disciplinas.splice(index,1)
+    setDisciplinas([...disciplinas])
+  }
   return (
     <>
      <h1>Hello World</h1>
@@ -36,8 +40,8 @@ function App() {
     
     { 
       disciplinas.map(
-        (disciplina)=>{
-          return <Disciplina codigo={disciplina.codigo} nome={disciplina.nome}/>
+        (disciplina,index)=>{
+          return <Disciplina codigo={disciplina.codigo} removeHandler={()=>{removeHandler(index)}}  nome={disciplina.nome}/>
         }
       )
     }
